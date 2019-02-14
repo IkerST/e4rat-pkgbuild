@@ -40,6 +40,9 @@ package() {
 
   make DESTDIR="$pkgdir" install
   install -dm755 "$pkgdir/var/lib/$pkgname"
+  
+  cd "$pkgdir"
+  mv sbin usr/bin
 }
 
 sha256sums=('f6feda9618eff0f9442baf771b4776b634e5a2f39e678c10e4c7946b2c6a96a0'
