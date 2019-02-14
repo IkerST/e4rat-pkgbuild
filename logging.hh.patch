@@ -1,0 +1,11 @@
+--- e4rat-0.2.3/src/logging.hh	2012-05-03 01:43:12.000000000 -0500
++++ src/e4rat-0.2.3/src/logging.hh	2019-02-13 23:20:50.425523216 -0600
+@@ -93,7 +93,7 @@ extern Logging logger;
+ #define dump_log(...) logger.write(__VA_ARGS__)
+ 
+ #ifdef DEBUG_ENABLED
+-    #define debug(format,args...) dump_log(Debug, "%s:%d in %s(): "format, __FILE__, __LINE__, __FUNCTION__, ## args)
++    #define debug(format, ...) logger.write(Debug, "%s:%d in %s(): " format, __FILE__, __LINE__, __FUNCTION__, ##__VA_ARGS__)
+ #else
+     #define debug(format,args...)
+ #endif
