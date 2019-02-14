@@ -1,0 +1,36 @@
+diff --git a/src/device.cc b/src/device.cc
+index bba5d12..c75559e 100644
+--- a/src/device.cc
++++ b/src/device.cc
+@@ -28,6 +28,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
++#include <sys/sysmacros.h>
+ #include <mntent.h>
+ 
+ #include <boost/lexical_cast.hpp>
+diff --git a/src/e4rat-collect.cc b/src/e4rat-collect.cc
+index 455057c..ec41355 100644
+--- a/src/e4rat-collect.cc
++++ b/src/e4rat-collect.cc
+@@ -27,6 +27,7 @@
+ #include <iostream>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <sys/sysmacros.h>
+ #include <getopt.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+diff --git a/src/listener.cc b/src/listener.cc
+index f7f0fa1..53a0aa0 100644
+--- a/src/listener.cc
++++ b/src/listener.cc
+@@ -28,6 +28,7 @@
+ #include <errno.h>
+ #include <unistd.h>
+ #include <sys/stat.h>
++#include <sys/sysmacros.h>
+ #include <cstring>
+ #include <linux/limits.h>
+ #include <fcntl.h>
